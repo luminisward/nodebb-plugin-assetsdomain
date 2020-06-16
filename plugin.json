@@ -1,0 +1,34 @@
+{
+  "id": "nodebb-plugin-assetsdomain",
+  "url": "https://github.com/luminisward/nodebb-plugin-assetsdomain",
+  "library": "./library.js",
+  "hooks": [
+    {
+      "hook": "static:app.load",
+      "method": "init"
+    },
+    {
+      "hook": "filter:admin.header.build",
+      "method": "addAdminNavigation"
+    },
+    {
+      "hook": "filter:meta.getLinkTags",
+      "method": "metaLink",
+      "priority": 100
+    },
+    {
+      "hook": "filter:parse.post",
+      "method": "postImage"
+    },
+    {
+      "hook": "filter:users.get",
+      "method": "userImage"
+    }
+  ],
+  "staticDirs": {
+    "static": "./static"
+  },
+  "less": ["static/style.less"],
+  "acpScripts": ["static/lib/admin.js"],
+  "templates": "static/templates"
+}

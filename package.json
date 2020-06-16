@@ -1,0 +1,44 @@
+{
+  "name": "nodebb-plugin-assetsdomain",
+  "version": "0.0.1",
+  "author": {
+    "name": "luminisward",
+    "email": "luminisward@vip.qq.com"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "keywords": [
+    "nodebb",
+    "plugin"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "main": "library.js",
+  "nbbpm": {
+    "compatibility": "^1.13.0"
+  },
+  "homepage": "https://github.com/luminisward/nodebb-plugin-assetsdomain#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luminisward/nodebb-plugin-assetsdomain"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0"
+  }
+}
